@@ -1,0 +1,38 @@
+﻿<Window x:Class="FlightSimulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FlightSimulator"
+        xmlns:view="clr-namespace:FlightSimulator.Views"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Viewbox Grid.Column="1" Grid.Row="1">
+            <TabControl Height="550" Width="517">
+                <TabItem Header="Manual">
+                    <view:Manual ></view:Manual>
+                </TabItem>
+                <TabItem Header="Auto Pilot">
+                    <view:Auto_Pilot></view:Auto_Pilot>
+                </TabItem>
+            </TabControl>
+        </Viewbox>
+        <Viewbox Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <view:conSetBoard VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="393"></view:conSetBoard>
+        </Viewbox>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Foreground="MediumPurple">
+            Flight Simulator
+        </TextBlock>
+
+
+    </Grid>
+</Window>

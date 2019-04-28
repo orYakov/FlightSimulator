@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="FlightSimulator.Views.connectAndSettings"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FlightSimulator.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button FontSize="20" FontWeight="Bold" Background="Gray"  Content="Connect" HorizontalAlignment="Stretch"  VerticalAlignment="Top" Width="110" Grid.ColumnSpan="2" Command="{Binding ConnectCommand}"/>
+        <Button FontSize="20" FontWeight="Bold" Background="Gray"  Content="DisConnect" HorizontalAlignment="Left" Margin="50,10" VerticalAlignment="Top" Width="110" Grid.Column="0" Command="{Binding DisConnectCommand}"/>
+        <Button FontSize="20" FontWeight="Bold" Background="Gray"  Content="Settings" HorizontalAlignment="Left" Margin="50,10" VerticalAlignment="Top" Width="110" Grid.Column="1" Command="{Binding SettingsCommand}"/>
+
+    </Grid>
+    
+</UserControl>
